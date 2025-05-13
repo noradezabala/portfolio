@@ -6,7 +6,26 @@
   font-style: normal;
   font-display: swap;
 }
- {
+@font-face {
+  font-family: "AdvercaseDemo-Bold";
+  src: url("assets/AdvercaseDemo-Bold.woff2") format("woff2"),
+    url("assets/AdvercaseDemo-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AdvercaseDemo";
+  src: url("assets/AdvercaseDemo.woff2") format("woff2"),
+    url("assets/AdvercaseDemo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  color: #111111;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,43 +33,44 @@
 }
 
 body {
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
-  background-image: url("tu-imagen-de-fondo.jpg");
+  background-image: url("https://ik.imagekit.io/noradezabala/paginanoradora/portfolio/blurface%20copia.jpg?updatedAt=1747147220190");
   background-size: cover;
   background-position: center;
   color: #333;
 }
-
-/* Menú superior */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
   background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
 }
 
-.menu {
+.menu-derecha,
+.menu-izquierda {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  max-width: 600px;
+  gap: 30px;
+  width: 30%;
+  padding: 0 20px;
 }
-
-.menu a {
+.itemmenu {
+  padding: 20px;
+  font-family: AndaleMono;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-  transition: color 0.3s;
+}
+.itemmenu: hover {
+  opacity: 0.7;
+}
+.menu-derecha {
+  justify-content: flex-start;
 }
 
-.menu a:hover {
-  color: #666;
+.menu-izquierda {
+  justify-content: flex-end;
 }
 
 .logo {
@@ -61,26 +81,25 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* Contenido principal */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
-.content-box {
+.cajablanca {
+  position: absolute;
+  top: 370px;
+  left: 640px;
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px;
+  padding: 50px;
   max-width: 600px;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
@@ -105,25 +124,33 @@ h1 {
   background-color: #555;
 }
 
-/* Footer */
 footer {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px 5%;
+  position: bottom;
   text-align: center;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.contact-info {
+  padding: 20px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #333;
+  color: white;
+  transition: bottom 0.3s;
   margin-bottom: 10px;
 }
 
-.social-links a {
-  color: #333;
+.primeralinea {
+  margin: 10px;
+  justify-content: center;
+}
+
+.contacto a {
+  margin: 10px;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 10px;
 }
 
 .legal {
-  color: #777;
+  margin: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
