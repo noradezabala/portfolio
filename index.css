@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "AndaleMono";
+  src: url("assets/AndaleMono.woff2") format("woff2"),
+    url("assets/AndaleMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("tu-imagen-de-fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+/* Menú superior */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #666;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 5%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.legal {
+  color: #777;
+}
