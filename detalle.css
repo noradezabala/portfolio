@@ -22,6 +22,15 @@
   font-style: normal;
   font-display: swap;
 }
+body {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -30,6 +39,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.9);
   position: relative;
   text-decoration: none;
+  font-family: AndaleMono;
 }
 
 .menu-derecha,
@@ -40,15 +50,18 @@ nav {
   padding: 0 20px;
   color: #111111;
 }
+
 .itemmenu {
   padding: 20px;
   font-family: AndaleMono;
   text-decoration: none;
   color: #111111;
 }
-.itemmenu: hover {
+
+.itemmenu:hover {
   opacity: 0.7;
 }
+
 .menu-derecha {
   justify-content: flex-start;
 }
@@ -56,12 +69,13 @@ nav {
 .menu-izquierda {
   justify-content: flex-end;
 }
-.logo {
-  width: 60px;
-  height: auto;
+p {
+  margin-bottom: 150px;
 }
 
 .logo {
+  width: 60px;
+  height: auto;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -70,58 +84,72 @@ nav {
   transform: translateX(-50%);
 }
 
-main {
+.proyecto-detalle {
+  padding: 20px 10% 40px;
+}
+
+.titulo-proyecto {
+  font-family: Advercase Demo;
+  kerning: 1em;
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.subtitulo-proyecto {
+  font-family: AndaleMono;
+  font-size: 1.5rem;
+}
+
+.contenido-proyecto {
+  display: flex;
+  gap: 30px;
+}
+
+.texto-proyecto {
+  flex: 1;
+  max-width: 40%;
+  font-family: AndaleMono;
+}
+
+.texto-proyecto p {
+  margin-bottom: 20px;
+}
+
+.galeria-simple {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Más espacio entre filas */
-  width: 90%;
-  max-width: 1200px;
-  margin: 50px auto;
-}
-
-.gallery-row {
-  display: flex;
-  justify-content: space-between;
   gap: 20px;
   width: 100%;
 }
 
-.gallery-row img {
-  flex: 1; /* Distribuye el espacio equitativamente */
-  min-width: 0; /* Permite que las imágenes se reduzcan */
-  height: 250px; /* Altura uniforme */
+.img-rectangular {
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 60px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.gallery-row img:hover {
-  transform: scale(1.03);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .gallery {
-    gap: 20px;
-  }
-
-  .gallery-row {
+  .contenido-proyecto {
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
   }
 
-  .gallery-row img {
-    width: 100%;
-    height: 200px;
+  .texto-proyecto {
+    max-width: 100%;
+  }
+
+  .galeria-simple {
+    order: -1;
+  }
+
+  .img-rectangular {
+    height: 150px;
   }
 }
 footer {
@@ -138,7 +166,6 @@ footer {
   transition: bottom 0.3s;
   z-index: 100;
 }
-
 .primeralinea {
   margin-top: 20px;
   margin-bottom: 10px;
